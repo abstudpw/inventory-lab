@@ -1,0 +1,26 @@
+{
+  "fields": [],
+  "relationships": [
+    {
+      "relationshipName": "equipment",
+      "otherEntityName": "equipment",
+      "relationshipType": "many-to-one",
+      "relationshipValidateRules": ["required"],
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipName": "tag",
+      "otherEntityName": "tag",
+      "relationshipType": "many-to-one",
+      "relationshipValidateRules": ["required"],
+      "otherEntityField": "name"
+    }
+  ],
+  "service": "serviceClass",
+  "dto": "mapstruct",
+  "jpaMetamodelFiltering": false,
+  "readOnly": false,
+  "pagination": "no",
+  "name": "EqTag",
+  "changelogDate": "20211025145205"
+}

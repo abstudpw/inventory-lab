@@ -1,0 +1,24 @@
+{
+  "inventoryLabApp": {
+    "producer": {
+      "home": {
+        "title": "Producer",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Dodaj Producer",
+        "createOrEditLabel": "Dodaj lub edytuj: Producer",
+        "notFound": "No Producers found"
+      },
+      "created": "Utworzono nowy obiekt typu Producer z identyfikatorem {{ param }}",
+      "updated": "Uaktualniono obiekt typu Producer z identyfikatorem {{ param }}",
+      "deleted": "Usunięto obiekt typu Producer z identyfikatorem {{ param }}",
+      "delete": {
+        "question": "Czy na pewno chcesz usunąć Producer {{ id }}?"
+      },
+      "detail": {
+        "title": "Producer"
+      },
+      "id": "ID",
+      "name": "Name"
+    }
+  }
+}

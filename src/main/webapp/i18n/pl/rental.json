@@ -1,0 +1,28 @@
+{
+  "inventoryLabApp": {
+    "rental": {
+      "home": {
+        "title": "Rental",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Dodaj Rental",
+        "createOrEditLabel": "Dodaj lub edytuj: Rental",
+        "notFound": "No Rentals found"
+      },
+      "created": "Utworzono nowy obiekt typu Rental z identyfikatorem {{ param }}",
+      "updated": "Uaktualniono obiekt typu Rental z identyfikatorem {{ param }}",
+      "deleted": "Usunięto obiekt typu Rental z identyfikatorem {{ param }}",
+      "delete": {
+        "question": "Czy na pewno chcesz usunąć Rental {{ id }}?"
+      },
+      "detail": {
+        "title": "Rental"
+      },
+      "id": "ID",
+      "from": "From",
+      "to": "To",
+      "active": "Active",
+      "rentedBy": "Rented By",
+      "rentedItem": "Rented Item"
+    }
+  }
+}

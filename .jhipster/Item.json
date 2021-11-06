@@ -1,0 +1,24 @@
+{
+  "fields": [
+    {
+      "fieldName": "rented",
+      "fieldType": "Boolean"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipName": "equipment",
+      "otherEntityName": "equipment",
+      "relationshipType": "many-to-one",
+      "relationshipValidateRules": ["required"],
+      "otherEntityField": "name"
+    }
+  ],
+  "service": "serviceClass",
+  "dto": "mapstruct",
+  "jpaMetamodelFiltering": false,
+  "readOnly": false,
+  "pagination": "no",
+  "name": "Item",
+  "changelogDate": "20211025143600"
+}

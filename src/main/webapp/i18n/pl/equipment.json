@@ -1,0 +1,29 @@
+{
+  "inventoryLabApp": {
+    "equipment": {
+      "home": {
+        "title": "Equipment",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Dodaj Equipment",
+        "createOrEditLabel": "Dodaj lub edytuj: Equipment",
+        "notFound": "No Equipment found"
+      },
+      "created": "Utworzono nowy obiekt typu Equipment z identyfikatorem {{ param }}",
+      "updated": "Uaktualniono obiekt typu Equipment z identyfikatorem {{ param }}",
+      "deleted": "Usunięto obiekt typu Equipment z identyfikatorem {{ param }}",
+      "delete": {
+        "question": "Czy na pewno chcesz usunąć Equipment {{ id }}?"
+      },
+      "detail": {
+        "title": "Equipment"
+      },
+      "id": "ID",
+      "name": "Name",
+      "model": "Model",
+      "photo": "Photo",
+      "description": "Description",
+      "url": "Url",
+      "producer": "Producer"
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "inventoryLabApp": {
+    "eqTag": {
+      "home": {
+        "title": "Eq Tag",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Dodaj Eq Tag",
+        "createOrEditLabel": "Dodaj lub edytuj: Eq Tag",
+        "notFound": "No Eq Tags found"
+      },
+      "created": "Utworzono nowy obiekt typu Eq Tag z identyfikatorem {{ param }}",
+      "updated": "Uaktualniono obiekt typu Eq Tag z identyfikatorem {{ param }}",
+      "deleted": "Usunięto obiekt typu Eq Tag z identyfikatorem {{ param }}",
+      "delete": {
+        "question": "Czy na pewno chcesz usunąć Eq Tag {{ id }}?"
+      },
+      "detail": {
+        "title": "Eq Tag"
+      },
+      "id": "ID",
+      "equipment": "Equipment",
+      "tag": "Tag"
+    }
+  }
+}

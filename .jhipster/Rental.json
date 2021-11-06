@@ -1,0 +1,41 @@
+{
+  "fields": [
+    {
+      "fieldName": "from",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "to",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "active",
+      "fieldType": "Boolean"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipName": "rentedBy",
+      "otherEntityName": "user",
+      "relationshipType": "many-to-one",
+      "relationshipValidateRules": ["required"],
+      "otherEntityField": "login",
+      "ownerSide": true,
+      "otherEntityRelationshipName": "rental"
+    },
+    {
+      "relationshipName": "rentedItem",
+      "otherEntityName": "item",
+      "relationshipType": "many-to-one",
+      "relationshipValidateRules": ["required"],
+      "otherEntityField": "id"
+    }
+  ],
+  "service": "serviceClass",
+  "dto": "mapstruct",
+  "jpaMetamodelFiltering": false,
+  "readOnly": false,
+  "pagination": "no",
+  "name": "Rental",
+  "changelogDate": "20211025144730"
+}
