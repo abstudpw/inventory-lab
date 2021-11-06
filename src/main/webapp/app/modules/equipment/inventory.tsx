@@ -6,16 +6,11 @@ import {IInventory} from "app/shared/model/inventory";
 import {Column} from "@material-table/core";
 import {useAppDispatch, useAppSelector} from "app/config/store";
 import {getEntities} from "app/modules/equipment/inventory-reducer";
-import {useStore} from "react-redux";
-import {RouteComponentProps} from "react-router-dom";
-import {AvailableItem} from "app/modules/equipment/available-item";
-import CollapsibleTable from "app/modules/equipment/table";
 import Table from "@mui/material/Table";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import TableCell from "@mui/material/TableCell";
 import TableBody from "@mui/material/TableBody";
-import {Button} from "@mui/material";
 
 interface InventoryProps {
   rows: IInventory[];
