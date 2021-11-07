@@ -31,7 +31,7 @@ const Routes = () => {
       <Switch>
         <ErrorBoundaryRoute path="/login" component={Login} />
         <ErrorBoundaryRoute path="/logout" component={Logout} />
-        {/*<ErrorBoundaryRoute path="/account/register" component={Register} />*/}
+        {/* <ErrorBoundaryRoute path="/account/register" component={Register} />*/}
         <ErrorBoundaryRoute path="/account/activate/:key?" component={Activate} />
         <ErrorBoundaryRoute path="/account/reset/request" component={PasswordResetInit} />
         <ErrorBoundaryRoute path="/account/reset/finish/:key?" component={PasswordResetFinish} />

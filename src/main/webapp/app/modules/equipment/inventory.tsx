@@ -53,7 +53,7 @@ function Inventory(props: InventoryProps) {
       { title: 'Availability',
         filtering: false,
         cellStyle: {fontSize: '12px'},
-        render: (rowData) => {
+        render(rowData) {
           const all = rowData.items.length;
           const av = rowData.items.filter(item => !item.rented).length;
           return (
