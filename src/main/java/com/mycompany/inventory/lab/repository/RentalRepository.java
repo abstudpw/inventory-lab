@@ -15,4 +15,5 @@ public interface RentalRepository extends JpaRepository<Rental, Long> {
     List<Rental> findByRentedByIsCurrentUser();
 
     List<Rental> findByRentedItemIdAndActiveIsTrue(Long itemId);
+
 }

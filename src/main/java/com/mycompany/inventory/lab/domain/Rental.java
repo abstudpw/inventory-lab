@@ -33,7 +33,7 @@ public class Rental implements Serializable {
     @NotNull
     private User rentedBy;
 
-    @ManyToOne(optional = false)
+    @ManyToOne(optional = false, cascade = CascadeType.ALL)
     @NotNull
     @JsonIgnoreProperties(value = { "equipment" }, allowSetters = true)
     private Item rentedItem;

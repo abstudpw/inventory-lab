@@ -50,6 +50,17 @@ function Inventory(props: InventoryProps) {
         render: (rowData) => <text>{rowData.tags.map(tag => tag.name.toString()).join(', ')}</text>
         },
       { title: 'Description', field: 'equipment.description', filtering: false, width: '25%', cellStyle:{fontSize: '12px'},},
+      { title: 'Availability',
+        filtering: false,
+        cellStyle: {fontSize: '12px'},
+        render: (rowData) => {
+          const all = rowData.items.length;
+          const av = rowData.items.filter(item => !item.rented).length;
+          return (
+            <text>{av}/{all}</text>
+          )
+        }
+      },
     ] as Column<IInventory>[];
 
 
@@ -60,7 +71,7 @@ function Inventory(props: InventoryProps) {
         options={{
           filtering: true,
         }}
-        title="Obecny stan laboratorium"
+        title="Laboratory inventory"
         detailPanel={rowData => {
           return isAuthenticated && (
                 <Table size="small" aria-label="purchases">
@@ -75,7 +86,7 @@ function Inventory(props: InventoryProps) {
                   </TableHead>
                   <TableBody>
                     {rowData.items.map((item) => {
-                      const name = item && item.rental && item.rental.rentedBy ? item.rental.rentedBy.firstName + ' ' + item.rental.rentedBy.lastName : '-';
+                      const name = item && item.rental && item.rental.rentedBy ? item.rental.rentedBy.login : '-';
                       const from = item && item.rental && item.rental.from ? item.rental.from : '-';
                       const to =item && item.rental && item.rental.to ? item.rental.to : '-';
                       return (<TableRow key={item.id}>

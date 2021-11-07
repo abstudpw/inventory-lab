@@ -2,7 +2,6 @@ package com.mycompany.inventory.lab.service.dto;
 
 import java.io.Serializable;
 import java.util.Objects;
-import javax.validation.constraints.*;
 
 /**
  * A DTO for the {@link com.mycompany.inventory.lab.domain.Item} entity.
@@ -15,7 +14,7 @@ public class ItemDTO implements Serializable {
 
     private EquipmentDTO equipment;
 
-    private RentalDTO rentalDTO;
+    private RentalDTO rental;
 
     public Long getId() {
         return id;
@@ -41,12 +40,12 @@ public class ItemDTO implements Serializable {
         this.equipment = equipment;
     }
 
-    public RentalDTO getRentalDTO() {
-        return rentalDTO;
+    public RentalDTO getRental() {
+        return rental;
     }
 
-    public void setRentalDTO(RentalDTO rentalDTO) {
-        this.rentalDTO = rentalDTO;
+    public void setRental(RentalDTO rental) {
+        this.rental = rental;
     }
 
     @Override

@@ -1,6 +1,8 @@
 package com.mycompany.inventory.lab.service;
 
+import com.mycompany.inventory.lab.domain.Item;
 import com.mycompany.inventory.lab.domain.Rental;
+import com.mycompany.inventory.lab.repository.ItemRepository;
 import com.mycompany.inventory.lab.repository.RentalRepository;
 import com.mycompany.inventory.lab.service.dto.RentalDTO;
 import com.mycompany.inventory.lab.service.mapper.RentalMapper;
@@ -26,9 +28,12 @@ public class RentalService {
 
     private final RentalMapper rentalMapper;
 
-    public RentalService(RentalRepository rentalRepository, RentalMapper rentalMapper) {
+    private final ItemRepository itemRepository;
+
+    public RentalService(RentalRepository rentalRepository, RentalMapper rentalMapper, ItemRepository itemRepository) {
         this.rentalRepository = rentalRepository;
         this.rentalMapper = rentalMapper;
+        this.itemRepository = itemRepository;
     }
 
     /**
@@ -40,8 +45,18 @@ public class RentalService {
     public RentalDTO save(RentalDTO rentalDTO) {
         log.debug("Request to save Rental : {}", rentalDTO);
         Rental rental = rentalMapper.toEntity(rentalDTO);
+        setRented(rental);
         rental = rentalRepository.save(rental);
         return rentalMapper.toDto(rental);
+    }
+
+    private void setRented(Rental rental) {
+        Optional<Item> fetched = itemRepository.findById(rental.getRentedItem().getId());
+        if (fetched.isPresent()) {
+            Item item = fetched.get();
+            item.setRented(rental.getActive());
+            itemRepository.save(item);
+        }
     }
 
     /**

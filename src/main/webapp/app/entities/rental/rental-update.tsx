@@ -158,7 +158,7 @@ export const RentalUpdate = (props: RouteComponentProps<{ id: string }>) => {
               >
                 <option value="" key="0" />
                 {items
-                  ? items.filter(item => !item.rented)
+                  ? items
                     .map(otherEntity => (
                       <option value={otherEntity.id} key={otherEntity.id}>
                         {otherEntity.id}
