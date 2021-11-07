@@ -34,8 +34,8 @@ spring:
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
     url: jdbc:mysql://remotemysql.com:3306/YucftmGW8B?useUnicode=true&characterEncoding=utf8&useSSL=false&useLegacyDatetimeCode=false&serverTimezone=UTC&createDatabaseIfNotExist=true
-    username: YucftmGW8B
-    password: 2YjXachU83
+    username: NqiNtEB1Db
+    password: eM2PfoismD
     hikari:
       poolName: Hikari
       auto-commit: false
